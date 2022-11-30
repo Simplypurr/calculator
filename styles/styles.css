@@ -27,12 +27,9 @@ body {
 }
 
 .calc-container {
-  display: flex;
   width: 375px;
   height: 812px;
   background-color: var(--calc-bg-color);
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .calc-header {
@@ -56,6 +53,28 @@ body {
 
 .functionality {
   padding: 0 20px;
+}
+
+.previous-operand {
+  display: block;
+  min-height: 47px;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 47px;
+  color: var(--btn-color-gray);
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.current-operand {
+  min-height: 96px;
+  display: block;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 96px;
+  text-align: right;
+  color: #fff;
+  margin-bottom: 16px;
 }
 
 .buttons-container {
@@ -90,13 +109,17 @@ button:active {
   background-color: var(--btn-color-blue);
 }
 
+.gray {
+  background-color: var(--btn-color-gray);
+}
+
 .operators-container {
   display: grid;
   gap: 16px;
   grid-area: 1 / 4 / 6 / 5;
 }
 
-.union {
+.delete {
   background-image: url("../assets/Union.svg");
   background-repeat: no-repeat;
   background-position: top 50% right 50%;
